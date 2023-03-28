@@ -1,0 +1,7 @@
+print.rmst2adapt        print.rmst2adapt
+rmst2adapt              Flexible and Coherent Test/Estimation Procedure
+                        Based on Restricted Mean Survival Times
+rmst2adapt.sample.data
+                        Generate a sample data from the pbc data
+survRM2adapt-package    Flexible and Coherent Test/Estimation Procedure
+                        Based on Restricted Mean Survival Times

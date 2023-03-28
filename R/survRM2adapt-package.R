@@ -1,0 +1,42 @@
+#' @name survRM2adapt-package
+#' @aliases  survRM2adapt-package
+#' @docType  package
+#' @title Flexible and Coherent Test/Estimation Procedure Based on Restricted Mean Survival Times
+#' @description
+#' Estimates the restricted mean survival time (RMST) with a time window [0, tau], where tau is selected during the procedure from among the time points provided by the user.
+#' It also estimates the RMST with a time window [tau1, tau2], where tau1 is selected during the procedure, same as above.
+#' @author Miki Horiguchi, Lu Tian, Hajime Uno
+#'
+#' Maintainer: Miki Horiguchi <horiguchimiki@gmail.com>
+#'
+#' @references
+#' Horiguchi M, Cronin A, Takeuchi M, Uno H. A flexible and coherent test/estimation procedure based on restricted mean survival times for censored time-to-event data
+#' in randomized clinical trials. Statistics in Medicine 2018. DOI:10.1002/sim.7661.
+#'
+#' Horiguchi M, Tian L, Uno H. On assessing survival benefit of immunotherapy using long-term restricted mean survival time.
+#' Statistics in Medicine 2023. DOI:10.1002/sim.9662.
+#'
+#' @keywords
+#' survival
+#' @seealso
+#' survival survRM2
+#' @import survival mvtnorm
+#' @importFrom stats pnorm qnorm rexp quantile
+#' @importFrom utils data
+#' @examples
+#' #--- Adaptive RMST test/estimation method by rmst2adapt() ---#
+#' data    = rmst2adapt.sample.data()
+#' nmethod = 100 #This is only for example use.
+#'               #Recommended to specify at least 100000 (default) or larger.
+#'
+#' a       = rmst2adapt(indata=data, tau_star=seq(6,12,2), method="perturbation",
+#'                nmethod=nmethod, test="2_side", seed=123)
+#' print(a)
+#' 
+#' #--- Adaptive long-term RMST test/estimation method by ltrmst2adapt() ---#
+#' data    = cm214_pfs
+#' b       = ltrmst2adapt(indata=data, tau1=c(0,1,2,3), tau2=10, 
+#'                test="2_side", seed=123)
+#' print(b)
+
+NULL
